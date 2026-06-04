@@ -1,7 +1,6 @@
 #!/bin/bash
-cat /etc/passwd | while read line; do
+cat /etc/ssh/sshd_config | while read line; do
   case "$line" in
-    *bin*) ;;
-    *) echo "$line" ;;
+    [a-zA-Z]*) echo "$line" ;;
   esac
 done
